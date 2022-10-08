@@ -1,12 +1,16 @@
+package org.example;
+
 import java.util.*;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
+
+public class Main {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("\nВведите натуральную степень: ");
-        int k = in.nextInt();
+        int l = in.nextInt();
+
+        Files test = new Files(l);
+        int k = test.Ratio();
 
         int[][] ratio = new int[k][2];
         String[] members = new String[k + 1];
