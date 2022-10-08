@@ -5,7 +5,7 @@ public class Main
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите натуральную степень: ");
+        System.out.print("\nВведите натуральную степень: ");
         int k = in.nextInt();
 
         int[][] ratio = new int[k][2];
@@ -15,9 +15,7 @@ public class Main
             for (int j = 0; j < 2; j++) {
                 ratio[i][0] = (int)(Math.random() * 5);
                 ratio[i][1] = k - i;
-                System.out.printf(" %d", ratio[i][j]);
             }
-            System.out.print("\t");
             if (ratio[i][0] > 1 && ratio[i][1] > 1)
             {
                 members[i] = Integer.toString(ratio[i][0]) + "X^" + Integer.toString(ratio[i][1]);
@@ -46,6 +44,6 @@ public class Main
             }
         }
 
-        System.out.printf("\n%S = 0", String.join(" + ", temp));
+        System.out.printf("\n%S = 0\n", String.join(" + ", temp));
     }
 }
