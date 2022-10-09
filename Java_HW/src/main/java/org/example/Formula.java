@@ -20,7 +20,7 @@ public class Formula {
     public String create_formula()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("\nВведите натуральную степень: ");
+        System.out.print("Введите натуральную степень: ");
         int k = in.nextInt();
 
         int[][] ratio = new int[k][2];
