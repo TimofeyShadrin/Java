@@ -15,7 +15,7 @@ public class Get_ratio {
         this.formula = formula.get(0);
     }
 
-    public int[][] sum_formulas()
+    public int[][] get_ratios()
     {
         String[] temp = formula
                 .replace("^", "")
@@ -27,7 +27,14 @@ public class Get_ratio {
         for (String word: temp)
         {
             String[] value = word.split("X");
-            ratios[i][0] = Integer.parseInt(value[0]);
+            try
+            {
+                ratios[i][0] = Integer.parseInt(value[0]);
+            }
+            catch (Exception ex)
+            {
+                ratios[i][0] = 1;
+            }
             if (i < temp.length - 2)
             {
                 ratios[i][1] = Integer.parseInt(value[1]);
