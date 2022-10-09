@@ -1,13 +1,26 @@
 package org.example;
 
+import java.io.FileWriter;
+import java.io.IOException;
 public class Files {
-    int ratio = 0;
 
-    public Files(int ratio){
-        this.ratio = ratio;
-    }
-    public int Ratio(){
-        return ratio*2;
+    private final String name;
+
+    public Files(String name){
+        this.name = name;
     }
 
+    public void write(String line)
+    {
+        try(FileWriter fw = new FileWriter(name, true))
+        {
+            fw.write(line);
+            fw.append('\n');
+            fw.flush();
+        }
+        catch (IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+    }
 }
