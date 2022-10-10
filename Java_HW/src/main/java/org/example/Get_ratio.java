@@ -24,9 +24,11 @@ public class Get_ratio {
                 .split(" ");
         int[][] ratios = new int[temp.length][2];
         int i = 0;
+        int j = 0;
         for (String word: temp)
         {
             String[] value = word.split("X");
+            //System.out.println(Arrays.toString(value));
             try
             {
                 ratios[i][0] = Integer.parseInt(value[0]);
@@ -35,17 +37,15 @@ public class Get_ratio {
             {
                 ratios[i][0] = 1;
             }
-            if (i < temp.length - 2)
+            try
             {
                 ratios[i][1] = Integer.parseInt(value[1]);
             }
-            else if (i == (temp.length - 2))
+            catch (Exception ex)
             {
-                ratios[i][1] = 1;
-            }
-            else if (i == (temp.length - 1))
-            {
-                ratios[i][1] = 0;
+                if (j == 0) ratios[i][1] = 1;
+                else ratios[i][1] = 0;
+                j++;
             }
             i++;
         }
