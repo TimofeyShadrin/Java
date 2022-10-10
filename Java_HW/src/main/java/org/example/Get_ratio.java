@@ -24,7 +24,6 @@ public class Get_ratio {
                 .split(" ");
         int[][] ratios = new int[temp.length][2];
         int i = 0;
-        int j = 0;
         for (String word: temp)
         {
             String[] value = word.split("X");
@@ -43,9 +42,9 @@ public class Get_ratio {
             }
             catch (Exception ex)
             {
-                if (j == 0) ratios[i][1] = 1;
+                if (String.valueOf(ratios[i][0]).equals("") &&
+                        String.valueOf(ratios[i][0]).equals("")) ratios[i][1] = 1;
                 else ratios[i][1] = 0;
-                j++;
             }
             i++;
         }
