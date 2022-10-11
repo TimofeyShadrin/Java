@@ -20,6 +20,11 @@ public class Sum_ratio {
             {
                 item[0] += row[0];
             }
+            else
+            {
+                item[0] = row[0];
+                item[1] = row[1];
+            }
         }
         return incoming;
     }
@@ -33,7 +38,7 @@ public class Sum_ratio {
             min_array = ratios_02;
             max_array = ratios_01;
         }
-        int[][] result = new int[max_array.length][2];
+        int[][] result = new int[Math.max(min_array[0][1], max_array[0][1])][2];
         for (int[] line: min_array)
         {
             result = findAndSumOne(line, max_array);
