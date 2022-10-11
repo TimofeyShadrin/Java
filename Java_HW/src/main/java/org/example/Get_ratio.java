@@ -12,7 +12,7 @@ public class Get_ratio {
     @Contract(pure = true)
     public Get_ratio(ArrayList<String> formula)
     {
-        this.formula = formula.get(0);
+        this.formula = formula.get(formula.size() - 1);
     }
 
     public int[][] get_ratios()
@@ -40,7 +40,7 @@ public class Get_ratio {
                     ratios[i][1] = Integer.parseInt(value[1]);
                 }
                 else if (value.length == 1) {
-                    System.out.println(word);
+                    //System.out.println(word);
                     if (word.endsWith("X")) {
                         ratios[i][0] = Integer.parseInt(value[0]);
                         ratios[i][1] = 1;

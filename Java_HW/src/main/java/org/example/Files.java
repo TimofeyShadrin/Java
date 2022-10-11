@@ -12,7 +12,7 @@ public class Files {
 
     public void write(String line)
     {
-        try(FileWriter fw = new FileWriter(name, false))
+        try(FileWriter fw = new FileWriter(name, true))
         {
             fw.write(line);
             fw.append('\n');

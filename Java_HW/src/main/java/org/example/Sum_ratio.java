@@ -12,36 +12,20 @@ public class Sum_ratio {
         this.ratios_02 = ratios_02;
     }
 
-    private int[][] findAndSumOne(int[] row, int[][] incoming)
-    {
-        for (int[] item: incoming)
-        {
-            if (item[1] == row[1])
-            {
-                item[0] += row[0];
-            }
-            else
-            {
-                item[0] = row[0];
-                item[1] = row[1];
-            }
-        }
-        return incoming;
-    }
-
     public int[][] resultOfSum()
     {
-        int[][] min_array = ratios_01;
-        int[][] max_array = ratios_02;
-        if(ratios_02.length < ratios_01.length)
+        //System.out.println(String.valueOf(Math.max(ratios_01[0][1], ratios_02[0][1]) + 1));
+        int[][] result = new int[Math.max(ratios_01[0][1], ratios_02[0][1]) + 1][2];
+        for (int[] line: ratios_01)
         {
-            min_array = ratios_02;
-            max_array = ratios_01;
+            result[result.length - 1 - line[1]] = line;
         }
-        int[][] result = new int[Math.max(min_array[0][1], max_array[0][1])][2];
-        for (int[] line: min_array)
+        for (int[] line: ratios_02)
         {
-            result = findAndSumOne(line, max_array);
+            if (result[result.length - 1 - line[1]][1] == line[1]) {
+                result[result.length - 1 - line[1]][0] += line[0];
+            }
+            else result[result.length - 1 - line[1]] = line;
         }
         return result;
     }

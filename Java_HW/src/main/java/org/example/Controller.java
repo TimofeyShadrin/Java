@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class Controller {
     static void controller()
     {
-        Formula line_01 = new Formula(3);
-        Formula line_02 = new Formula(3);
+        Formula line_01 = new Formula(10);
+        Formula line_02 = new Formula(5);
 
         Files first = new Files("formula_01.txt");
         Files second = new Files("formula_02.txt");
@@ -16,8 +16,10 @@ public class Controller {
 
         Read result_01 = new Read("formula_01.txt");
         Read result_02 = new Read("formula_02.txt");
-        System.out.println(result_01.read());
-        System.out.println(result_02.read());
+        ArrayList<String> test_list_01 = result_01.read();
+        ArrayList<String> test_list_02 = result_02.read();
+        System.out.println(test_list_01.get(test_list_01.size() - 1));
+        System.out.println(test_list_02.get(test_list_02.size() - 1));
 
         Get_ratio getRatio_01 = new Get_ratio(result_01.read());
         Get_ratio getRatio_02 = new Get_ratio(result_02.read());
