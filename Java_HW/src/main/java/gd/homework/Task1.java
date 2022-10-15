@@ -33,8 +33,8 @@ public abstract class Task1 {
         return result;
     }
 
-    public static int factorial() {
-        int result = 1;
+    public static float factorial() {
+        float result = 1f;
         for (int i = 1; i <= n; i++) {
             result *= i;
         }
