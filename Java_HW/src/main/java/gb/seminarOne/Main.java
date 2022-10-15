@@ -1,14 +1,21 @@
 package gb.seminarOne;
 
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
-        //Дан массив двоичных чисел, например [1,1,0,1,1,1],
-        //вывести максимальное количество подряд идущих 1.
-
-        //Дан массив nums = [3,2,2,3] и число val = 3.
-        // Если в массиве есть числа, равные заданному, нужно перенести эти элементы в конец массива.
-        // Таким образом, первые несколько (или все) элементов массива должны быть отличны от заданного,
-        // а остальные - равны ему
-
+        String pathProject = System.getProperty("home/timofei");
+        String pathDir = pathProject.concat("/files");
+        File dir = new File(pathDir);
+        System.out.println(dir.getAbsolutePath());
+        if (dir.mkdir()) {
+            System.out.println("+");
+        }
+        else {
+            System.out.println("-");
+        }
+        for (String fname: dir.list()) {
+            System.out.println(fname);
+        }
     }
 }

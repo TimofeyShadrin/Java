@@ -4,44 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a9b396d-8962-44e7-9fcc-fa854a32e530" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_FX/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/src/main/java/gd/seminar_01/homework/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/src/main/java/gd/seminar_01/homework/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homework/src/main/resources/gd/seminar_01/homework/hello-view.fxml" beforeDir="false" />
+    <list default="true" id="0a9b396d-8962-44e7-9fcc-fa854a32e530" name="Changes" comment="Task 1 &amp; 2 finished">
+      <change afterPath="$PROJECT_DIR$/../Java_HW/log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_HW/src/main/java/gb/seminarOne/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/src/main/java/gb/seminarOne/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_HW/src/main/java/gd/homework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/src/main/java/gd/homework/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_HW/target/classes/gb/seminarOne/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/target/classes/gb/seminarOne/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java_HW/target/classes/gd/homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/target/classes/gd/homework/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +55,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665834858380</updated>
     </task>
+    <task id="LOCAL-00001" summary="Task 1 &amp; 2 finished">
+      <created>1665846965167</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665846965167</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,5 +75,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Task 1 &amp; 2 finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 1 &amp; 2 finished" />
   </component>
 </project>

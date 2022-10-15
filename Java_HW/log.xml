@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-10-15T17:49:55.084449144Z</date>
+  <millis>1665856195084</millis>
+  <nanos>449144</nanos>
+  <sequence>0</sequence>
+  <logger>gd.homework.Main</logger>
+  <level>WARNING</level>
+  <class>gd.homework.Task3</class>
+  <method>calculate</method>
+  <thread>1</thread>
+  <message>You can't divide by zero</message>
+</record>
+</log>

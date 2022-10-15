@@ -1,9 +1,14 @@
 package gd.homework;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.XMLFormatter;
 
 public abstract class Task3 {
 // Реализовать простой калькулятор
@@ -42,7 +47,7 @@ public abstract class Task3 {
         return flag;
     }
 
-    public static String calculate() {
+    public static String calculate() throws IOException {
         String result = "";
         ArrayList<String> members = new ArrayList<>(List.of(getInput()));
         for (int i = 0; i < members.size(); i++) {
@@ -60,6 +65,14 @@ public abstract class Task3 {
                     temp = "You can't divide by zero";
                     members.clear();
                     members.add(temp);
+                    Logger logger = Logger.getLogger(Main.class.getName());
+                    //ConsoleHandler ch = new ConsoleHandler();
+                    FileHandler fh = new FileHandler("log.xml");
+                    //logger.addHandler(ch);
+                    logger.addHandler(fh);
+                    XMLFormatter xml = new XMLFormatter();
+                    fh.setFormatter(xml);
+                    logger.log(Level.WARNING, "You can't divide by zero");
                     break;
                     }
                 else {

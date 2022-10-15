@@ -1,7 +1,13 @@
 package gd.homework;
 
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.XMLFormatter;
+
 public abstract class Controller {
-    public static void controller() {
+    public static void controller() throws IOException {
         Task1.SetN();
         System.out.print("Triangular number = ");
         System.out.println(Task1.triangularNumber());
