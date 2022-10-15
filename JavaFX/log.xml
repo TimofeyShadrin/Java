@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-10-15T18:48:36.879504570Z</date>
+  <millis>1665859716879</millis>
+  <nanos>504570</nanos>
+  <sequence>0</sequence>
+  <logger>com.example.javafx.Task3</logger>
+  <level>WARNING</level>
+  <class>com.example.javafx.Task3</class>
+  <method>calculate</method>
+  <thread>25</thread>
+  <message>You can't divide by zero</message>
+</record>
+</log>

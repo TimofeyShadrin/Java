@@ -39,10 +39,25 @@ public class HelloController implements Initializable {
         if(!outputTF.getText().isEmpty()) {
             try {
                 number = Integer.parseInt(outputTF.getText());
-                String temp = "\nTriangular number = " + String.valueOf(triangularNumber(number)) + "\n" +
+                StringBuilder myString = new StringBuilder();
+                int i = 0;
+                for (int item: primeNumbers(number)) {
+                    if (i <= 10) {
+                        myString.append(String.valueOf(item));
+                        myString.append(", ");
+                        i++;
+                    }
+                    else {
+                        myString.append("\n");
+                        i = 0;
+                    }
+                }
+                String temp1 = String.valueOf(myString);
+                String temp2 = "\nTriangular number = " + String.valueOf(triangularNumber(number)) + "\n" +
                         "\nFactorial = " + String.valueOf(factorial(number)) +
-                        "\n\nPrime numbers of " + number + " are:\n" + String.valueOf(primeNumbers(number));
-                out.setText(String.valueOf(temp));
+                        "\n\nPrime numbers of " + number + " are:\n"
+                        + temp1.substring(0, temp1.length() - 2);
+                out.setText(String.valueOf(temp2));
             }
             catch (Exception ex) {
                 out.setText("Input is incorrect!");
