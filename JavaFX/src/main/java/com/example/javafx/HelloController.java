@@ -6,21 +6,32 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
     @FXML
-    Label out;
+    Label out, result;
 
     @FXML
-    TextField outputTF;
+    TextField outputTF, formula;
     private static int number = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    @FXML
+    private void onGetResult(ActionEvent event) throws IOException {
+        if(!formula.getText().isEmpty()) {
+            Task3.getInput(formula.getText());
+            String temp = "You have entered this formula:\n" + String.join("", Task3.invoice)
+                    + "\nAnd your result = " + Task3.calculate();
+            result.setText(temp);
+        }
     }
 
     @FXML

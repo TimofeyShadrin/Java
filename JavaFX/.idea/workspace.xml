@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a9b396d-8962-44e7-9fcc-fa854a32e530" name="Changes" comment="Task 1 &amp; 2 finished">
-      <change afterPath="$PROJECT_DIR$/../Java_HW/log.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/Task3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_HW/src/main/java/gb/seminarOne/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/src/main/java/gb/seminarOne/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_HW/src/main/java/gd/homework/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/src/main/java/gd/homework/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_HW/target/classes/gb/seminarOne/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/target/classes/gb/seminarOne/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java_HW/target/classes/gd/homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java_HW/target/classes/gd/homework/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafx/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/javafx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafx/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

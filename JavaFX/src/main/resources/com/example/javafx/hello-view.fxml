@@ -42,4 +42,33 @@
             <Font size="14.0" />
         </font>
     </Label>
+    <Label fx:id="task3" text="Enter formula:">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <children>
+        <BorderPane>
+            <top>
+                <TextField fx:id="formula" alignment="CENTER_LEFT" promptText="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </top>
+        </BorderPane>
+    </children>
+    <children>
+        <BorderPane>
+            <center>
+                <Button BorderPane.alignment="TOP_RIGHT" prefHeight="18" text="Get result"
+                        onAction="#onGetResult"/>
+            </center>
+        </BorderPane>
+    </children>
+    <Label fx:id="result">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
 </VBox>
