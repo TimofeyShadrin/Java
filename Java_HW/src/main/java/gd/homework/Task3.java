@@ -22,7 +22,6 @@ public abstract class Task3 {
             }
         }
         input = String.valueOf(temp);
-        System.out.println(input);
         StringBuilder filter = new StringBuilder();
         for (char ch: input.toCharArray()) {
             if (flag(ch)) filter.append(ch);
@@ -72,9 +71,28 @@ public abstract class Task3 {
                     i--;
                 }
             }
-
         }
-        result = String.valueOf(members);
+        for (int i = 0; i < members.size(); i++) {
+            String temp = "";
+            if (members.get(i).equals("+")) {
+                temp = String.valueOf(Double.parseDouble(members.get(i - 1)) +
+                        Double.parseDouble(members.get(i + 1)));
+                members.set(i, temp);
+                members.remove(i + 1);
+                members.remove(i - 1);
+                i--;
+            }
+            else if (members.get(i).equals("-")) {
+                temp = String.valueOf(Double.parseDouble(members.get(i - 1)) -
+                        Double.parseDouble(members.get(i + 1)));
+                members.set(i, temp);
+                members.remove(i + 1);
+                members.remove(i - 1);
+                i--;
+                }
+            }
+
+        result = members.get(0);
         return result;
     }
 }

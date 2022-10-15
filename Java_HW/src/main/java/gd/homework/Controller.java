@@ -10,6 +10,6 @@ public abstract class Controller {
         System.out.println("Prime numbers of "+ Task1.getN() + " are:");
         System.out.println(String.valueOf(Task2.primeNumbers()));
         System.out.print("Enter formula: ");
-        System.out.println(Task3.calculate());
+        System.out.println("Result = " + Task3.calculate());
     }
 }
