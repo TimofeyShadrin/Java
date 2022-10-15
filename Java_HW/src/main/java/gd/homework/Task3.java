@@ -1,16 +1,17 @@
 package gd.homework;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public abstract class Task3 {
+// Реализовать простой калькулятор
 
-    private static final ArrayList<String> result = new ArrayList<>();
-
-    public static String getInput() {
+    private static String[] getInput() {
         Scanner scan = new Scanner(System.in);
-        StringBuilder temp = new StringBuilder();
         String input = scan.nextLine();
+        StringBuilder temp = new StringBuilder();
         for (char ch: input.toCharArray()) {
             switch (ch) {
                 case '+' -> temp.append(" + ");
@@ -27,7 +28,7 @@ public abstract class Task3 {
             if (flag(ch)) filter.append(ch);
         }
         input = String.valueOf(filter);
-        return input;
+        return input.split(" ");
     }
 
     private static boolean flag(char ch) {
@@ -40,5 +41,39 @@ public abstract class Task3 {
             }
         }
         return flag;
+    }
+
+    public static String calculate() {
+        String result = "";
+        ArrayList<String> members = new ArrayList<>(List.of(getInput()));
+        for (int i = 0; i < members.size(); i++) {
+            String temp = "";
+            if (members.get(i).equals("*")) {
+                temp = String.valueOf(Double.parseDouble(members.get(i - 1)) *
+                        Double.parseDouble(members.get(i + 1)));
+                members.set(i, temp);
+                members.remove(i + 1);
+                members.remove(i - 1);
+                i--;
+            }
+            else if (members.get(i).equals("/")) {
+                if (!Objects.equals(members.get(i + 1), "0")) {
+                    temp = String.valueOf(Double.parseDouble(members.get(i - 1)) /
+                            Double.parseDouble(members.get(i + 1)));
+                    members.set(i, temp);
+                    members.remove(i + 1);
+                    members.remove(i - 1);
+                    i--;
+                    }
+                else {
+                    temp = "You can't divide by zero";
+                    members.clear();
+                    members.set(0, temp);
+                    break;
+                }
+            }
+        }
+        result = String.valueOf(members);
+        return result;
     }
 }
