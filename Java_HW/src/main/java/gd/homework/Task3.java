@@ -57,21 +57,22 @@ public abstract class Task3 {
                 i--;
             }
             else if (members.get(i).equals("/")) {
-                if (!Objects.equals(members.get(i + 1), "0")) {
+                if (members.get(i + 1).equals("0")) {
+                    temp = "You can't divide by zero";
+                    members.clear();
+                    members.add(temp);
+                    break;
+                    }
+                else {
                     temp = String.valueOf(Double.parseDouble(members.get(i - 1)) /
                             Double.parseDouble(members.get(i + 1)));
                     members.set(i, temp);
                     members.remove(i + 1);
                     members.remove(i - 1);
                     i--;
-                    }
-                else {
-                    temp = "You can't divide by zero";
-                    members.clear();
-                    members.set(0, temp);
-                    break;
                 }
             }
+
         }
         result = String.valueOf(members);
         return result;
