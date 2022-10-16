@@ -3,7 +3,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Program {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Program extends Application {
     // Connect to your database.
     // Replace server name, username, and password with your credentials
     public static void main(String[] args) {
@@ -21,5 +27,16 @@ public class Program {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Application.launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        String fxmlFile = "/fxmlRoot.fxml";
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResourceAsStream(fxmlFile));
+        stage.setTitle("JavaFX and Maven");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
