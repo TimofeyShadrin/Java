@@ -6,9 +6,9 @@
   <millis>1665856195084</millis>
   <nanos>449144</nanos>
   <sequence>0</sequence>
-  <logger>gd.homework.Main</logger>
+  <logger>gb.homework.Main</logger>
   <level>WARNING</level>
-  <class>gd.homework.Task3</class>
+  <class>gb.homework.Task3</class>
   <method>calculate</method>
   <thread>1</thread>
   <message>You can't divide by zero</message>
