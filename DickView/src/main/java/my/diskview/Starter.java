@@ -64,13 +64,11 @@ public class Starter extends Application {
                         })
                         .map(entry -> new PieChart.Data(entry.getKey(), entry.getValue())).toList()
         );
-        pieChart.getData().forEach((data) -> {
-            data
-                    .getNode()
-                    .addEventHandler(
-                            MouseEvent.MOUSE_PRESSED,
-                            event -> refillChart(data.getName())
-                    );
-        });
+        pieChart.getData().forEach((data) -> data
+                .getNode()
+                .addEventHandler(
+                        MouseEvent.MOUSE_PRESSED,
+                        event -> refillChart(data.getName())
+                ));
     }
 }
