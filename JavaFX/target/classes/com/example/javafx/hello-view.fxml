@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+<VBox id="VB" xmlns="http://javafx.com/javafx" spacing="10"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javafx.HelloController">
+    <padding>
+        <Insets top="10" right="10" left="10" bottom="10" />
+    </padding>
+    <Label fx:id="enter" text="Enter an integer number > 0:">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <children>
+        <BorderPane>
+            <top>
+                <TextField fx:id="outputTF" alignment="CENTER_LEFT" promptText="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </top>
+        </BorderPane>
+    </children>
+    <children>
+        <BorderPane>
+            <center>
+                <Button BorderPane.alignment="TOP_RIGHT" prefHeight="18" text="Submit"
+                onAction="#onSubmit"/>
+            </center>
+        </BorderPane>
+    </children>
+    <Label fx:id="out">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="task3" text="Enter formula:">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <children>
+        <BorderPane>
+            <top>
+                <TextField fx:id="formula" alignment="CENTER_LEFT" promptText="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </top>
+        </BorderPane>
+    </children>
+    <children>
+        <BorderPane>
+            <center>
+                <Button BorderPane.alignment="TOP_RIGHT" prefHeight="18" text="Get result"
+                        onAction="#onGetResult"/>
+            </center>
+        </BorderPane>
+    </children>
+    <Label fx:id="result">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+</VBox>

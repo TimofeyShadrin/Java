@@ -20,6 +20,9 @@ public abstract class Task1 {
                 System.out.println("Input is incorrect!");
                 SetN();
             }
+            finally {
+                n = 0;
+            }
         }
     }
 
