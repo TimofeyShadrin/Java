@@ -1,8 +1,7 @@
-package gd.homework;
+package gb.homework;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public abstract class Task3 {
@@ -43,10 +42,10 @@ public abstract class Task3 {
     }
 
     public static String calculate() {
-        String result = "";
+        String result;
         ArrayList<String> members = new ArrayList<>(List.of(getInput()));
         for (int i = 0; i < members.size(); i++) {
-            String temp = "";
+            String temp;
             if (members.get(i).equals("*")) {
                 temp = String.valueOf(Double.parseDouble(members.get(i - 1)) *
                         Double.parseDouble(members.get(i + 1)));
@@ -73,7 +72,7 @@ public abstract class Task3 {
             }
         }
         for (int i = 0; i < members.size(); i++) {
-            String temp = "";
+            String temp;
             if (members.get(i).equals("+")) {
                 temp = String.valueOf(Double.parseDouble(members.get(i - 1)) +
                         Double.parseDouble(members.get(i + 1)));
