@@ -1,29 +1,34 @@
 package gb.homework;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public abstract class Task1 {
 //    Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
     private static int n = 0;
+    private static final Logger log = Logger.getLogger(Task1.class.getName());
 
     public static void SetN() {
         Scanner scan = new Scanner(System.in);
+
         while (n == 0) {
             try {
                 System.out.print("Enter an integer number > 0: ");
                 n = scan.nextInt();
                 if (n <= 0) {
-                    System.out.println("Input is incorrect!");
+                    log.warning("Input is incorrect!");
                     n = 0;
                 }
-            } catch (Exception ex) {
-                System.out.println("Input is incorrect!");
-                SetN();
+            } catch (InputMismatchException ex) {
+                log.warning("Input is incorrect!");
+                //SetN();
             }
             finally {
                 n = 0;
             }
         }
+        scan.close();
     }
 
     public static int getN() {

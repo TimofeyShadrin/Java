@@ -3,10 +3,11 @@ package gb.homework;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public abstract class Task3 {
 // Реализовать простой калькулятор
-
+    private static final Logger log = Logger.getLogger(Task3.class.getName());
     private static String[] getInput() {
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
@@ -57,6 +58,7 @@ public abstract class Task3 {
             else if (members.get(i).equals("/")) {
                 if (members.get(i + 1).equals("0")) {
                     temp = "You can't divide by zero";
+                    log.warning("You can't divide by zero");
                     members.clear();
                     members.add(temp);
                     break;

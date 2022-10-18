@@ -11,22 +11,25 @@ package gb.seminarOne;
 // 3 Расширение файла:
 // 4 Расширение файла: jpg
 
-import java.util.logging.Logger;
-
 public class Main {
     public static void main(String[] args) {
-        String initStr = "aaabaaa";
-        Logger logger = Logger.getAnonymousLogger();
-        logger.info(String.valueOf(task3Func(initStr)));
+        //String initStr = "aaabaaa";
+//        Logger logger = Logger.getAnonymousLogger();
+//        logger.info(String.valueOf(
+//                walk(Paths.get("/home/timofei/Downloads"))
+//                .filter(Files::isRegularFile)
+//                .collect(Collectors.toList())
+//                )
+//        );
     }
-    public static boolean task3Func(String initStr){
-        boolean isPalen = true;
-        for (int i = 0; i < initStr.length() / 2; i++) {
-            if (initStr.charAt(i) != initStr.charAt(initStr.length()- 1 - i)){
-                isPalen = false; break;
-            }
-        }
-        return isPalen; }
+//    public static boolean task3Func(String initStr){
+//        boolean isPalen = true;
+//        for (int i = 0; i < initStr.length() / 2; i++) {
+//            if (initStr.charAt(i) != initStr.charAt(initStr.length()- 1 - i)){
+//                isPalen = false; break;
+//            }
+//        }
+//        return isPalen; }
 
     //StringBuilder builder = new StringBuilder(text.replaceAll("[^a-zA-ZА-я]", ""));
     //return builder.toString().equalsIgnoreCase(builder.reverse().toString());
