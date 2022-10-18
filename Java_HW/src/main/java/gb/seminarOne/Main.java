@@ -22,7 +22,7 @@ public class Main {
             log.info(message);
         }
         catch (InputMismatchException ex) {
-            ex.printStackTrace();
+            log.warning("Your input is incorrect!");
         }
     }
 }
