@@ -1,39 +1,30 @@
 package gb.seminarOne;
 
-//Дано четное число N (>0) и символы c1 и c2.
-//Написать метод, который вернет строку длины N,
-//которая состоит из чередующихся символов c1 и c2, начиная с c1.
-
-// Напишите метод, который определит тип (расширение)
-// файлов из текущей папки и выведет в консоль результат вида
-// 1 Расширение файла: txt
-// 2 Расширение файла: pdf
-// 3 Расширение файла:
-// 4 Расширение файла: jpg
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
-        //String initStr = "aaabaaa";
-//        Logger logger = Logger.getAnonymousLogger();
-//        logger.info(String.valueOf(
-//                walk(Paths.get("/home/timofei/Downloads"))
-//                .filter(Files::isRegularFile)
-//                .collect(Collectors.toList())
-//                )
-//        );
+        Logger log = Logger.getLogger(Main.class.getName());
+        Degree degree = new Degree();
+        try (Scanner scanner = new Scanner(System.in)) {
+            log.info("Enter a number: ");
+            degree.setNumber(scanner.nextDouble());
+            log.info("Enter a degree: ");
+            degree.setDegree(scanner.nextDouble());
+            String message;
+            if (degree.getDegree() < 0)
+                message = "And your result is: " + String.format("%.2f", degree.getResult());
+            else {
+                message = "And your result is: " + String.format("%.0f", degree.getResult());
+            }
+            log.info(message);
+        }
+        catch (InputMismatchException ex) {
+            ex.printStackTrace();
+        }
     }
-//    public static boolean task3Func(String initStr){
-//        boolean isPalen = true;
-//        for (int i = 0; i < initStr.length() / 2; i++) {
-//            if (initStr.charAt(i) != initStr.charAt(initStr.length()- 1 - i)){
-//                isPalen = false; break;
-//            }
-//        }
-//        return isPalen; }
-
-    //StringBuilder builder = new StringBuilder(text.replaceAll("[^a-zA-ZА-я]", ""));
-    //return builder.toString().equalsIgnoreCase(builder.reverse().toString());
-
 }
 
 
