@@ -11,14 +11,16 @@ public abstract class Task1 {
 
     public static void SetN() {
         Scanner scan = new Scanner(System.in);
-
-        while (n == 0) {
+        boolean flag = true;
+        while (flag) {
             try {
-                System.out.print("Enter an integer number > 0: ");
+                log.info("Write your number");
                 n = scan.nextInt();
-                if (n <= 0) {
+                if(n <= 0){
                     log.warning("Input is incorrect!");
                     n = 0;
+                } else {
+                    flag = false;
                 }
             } catch (InputMismatchException ex) {
                 log.warning("Input is incorrect!");
