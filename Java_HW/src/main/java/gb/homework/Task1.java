@@ -1,5 +1,6 @@
 package gb.homework;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public abstract class Task1 {
@@ -16,7 +17,7 @@ public abstract class Task1 {
                     System.out.println("Input is incorrect!");
                     n = 0;
                 }
-            } catch (Exception ex) {
+            } catch (InputMismatchException ex) {
                 System.out.println("Input is incorrect!");
                 SetN();
             }
@@ -28,7 +29,7 @@ public abstract class Task1 {
     }
 
     public static int triangularNumber() {
-        int result = 0;
+        int result;
         result = n / 2 * (n + 1);
         return result;
     }
