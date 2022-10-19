@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class Main {
-
     // Дана строка sql-запроса "select * from students".
     // Сформируйте часть WHERE этого запроса, используя StringBuilder.
     //
@@ -14,12 +13,14 @@ public class Main {
     // Результат работы методов: "select * from students where firstName = 'Ivan' and ...".
     public static void main(String[] args) {
         Logger log = Logger.getLogger(gb.seminarOne.Main.class.getName());
-        StringBuilder sb = new StringBuilder("select * from students where");
+        System.setProperty("java.util.logging.SimpleFormatter.format",
+                "%1$tF %1$tT %4$s %2$s %5$s%6$s%n");
+        StringBuilder sb = new StringBuilder("\nselect * from students where");
         Scanner scan = new Scanner(System.in);
-        log.info("Enter name");
+        log.info("\nEnter name");
         String temp = scan.nextLine();
         sb.append(" firstName = '").append(temp).append("' and");
-        log.info("Enter name");
+        log.info("\nEnter lastname");
         temp = scan.nextLine();
         sb.append(" secondName = '").append(temp).append("'");
         String q = String.valueOf(sb);
@@ -28,10 +29,14 @@ public class Main {
         String[] paramName = new String[] {"name", "lastname", "date of birth"};
         String[] paramValue = new String[] {"Ivan", "Ivanov", "11.02.2000",
                                             "Sergey", "Petrov", "25.03.2001",
-                                            "Oleg", "Sidorov", "18.09.2002",
+                                            "Oleg", "Sidor", "18.09.2002",
                                             "Ivan", "Ivanov", "15.05.2001"};
-
-        System.out.print(updateQueryByArrays(q, paramName,paramValue));
+        log.info("\n" + updateQueryByArrays(q, paramName, paramValue));
+        String json = "{'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '11/02/2000', " +
+                "'name': 'Sergey', 'lastname': 'Petrov', 'date of birth': '25/03/2001', " +
+                "'name': 'Oleg', 'lastname': 'Sidor', 'date of birth': '18/09/2002', " +
+                "'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '15/05/2001'}";
+        log.info("\n" + updateQueryByJson(q, json));
     }
 
     public static String updateQueryByArrays(String q, String[] paramName, String[] paramValue){
@@ -59,8 +64,21 @@ public class Main {
         return String.valueOf(builder);
     }
 
-    public String updateQueryByJson(String q, String json){
-
-        return "";
+    public static String updateQueryByJson(String q, String json){
+        String[] data = json.replace("{", "")
+                .replace("}", "")
+                .split(", ");
+        StringBuilder paramName = new StringBuilder();
+        StringBuilder paramValue = new StringBuilder();
+        for (String datum : data) {
+            String temp = datum.replace("'", "")
+                    .split(": ")[0];
+            if (!String.valueOf(paramName).equals(temp))
+                paramName.append(temp).append(";");
+            paramValue.append(datum.replace("'", "")
+                    .split(": ")[1]).append(";");
+        }
+        return updateQueryByArrays(q, String.valueOf(paramName).trim().split(";"),
+                String.valueOf(paramValue).trim().split(";"));
     }
 }
