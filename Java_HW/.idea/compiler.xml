@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Java_HW" options="--add-exports jdk.jfr/jdk.jfr.internal.tool=ALL-UNNAMED" />
+      <module name="Java_HW" options="" />
     </option>
   </component>
 </project>
