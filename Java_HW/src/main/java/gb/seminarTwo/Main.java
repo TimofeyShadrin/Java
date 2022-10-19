@@ -65,8 +65,7 @@ public class Main {
     }
 
     public static String updateQueryByJson(String q, String json){
-        String[] data = json.replace("{", "")
-                .replace("}", "")
+        String[] data = json.replaceAll("[{.+}]", "")
                 .split(", ");
         StringBuilder paramName = new StringBuilder();
         StringBuilder paramValue = new StringBuilder();
