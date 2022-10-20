@@ -32,10 +32,10 @@ public class Main {
                                             "Oleg", "Sidor", "18.09.2002",
                                             "Ivan", "Ivanov", "15.05.2001"};
         log.info("\n" + updateQueryByArrays(q, paramName, paramValue));
-        String json = "{'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '11/02/2000', " +
-                "'name': 'Sergey', 'lastname': 'Petrov', 'date of birth': '25/03/2001', " +
-                "'name': 'Oleg', 'lastname': 'Sidor', 'date of birth': '18/09/2002', " +
-                "'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '15/05/2001'}";
+        String json = "{'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '11/02/2000', 'status': 'student', " +
+                "'name': 'Sergey', 'lastname': 'Petrov', 'date of birth': '25/03/2001', 'status': 'student', " +
+                "'name': 'Oleg', 'lastname': 'Sidor', 'date of birth': '18/09/2002', 'status': 'student', " +
+                "'name': 'Ivan', 'lastname': 'Ivanov', 'date of birth': '15/05/2001', 'status': 'student'}";
         log.info("\n" + updateQueryByJson(q, json));
     }
 
@@ -47,18 +47,13 @@ public class Main {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < paramValue.length; i+=3) {
             if (student[0].equals(paramValue[i]) && student[1].equals(paramValue[i + 1])){
-                builder.append(paramName[0])
-                        .append(": ")
-                        .append(paramValue[i])
-                        .append(", ")
-                        .append(paramName[1])
-                        .append(": ")
-                        .append(paramValue[i + 1])
-                        .append(", ")
-                        .append(paramName[2])
-                        .append(": ")
-                        .append(paramValue[i + 2])
-                        .append("\n");
+                for (int j = 0; j < paramName.length; j++) {
+                    builder.append(paramName[j])
+                            .append(": ")
+                            .append(paramValue[i + j])
+                            .append(", ");
+                }
+                builder.deleteCharAt(builder.length() - 2).append("\n");
             }
         }
         return String.valueOf(builder);
