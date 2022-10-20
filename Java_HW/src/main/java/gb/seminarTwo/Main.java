@@ -72,7 +72,7 @@ public class Main {
         for (String datum : data) {
             String temp = datum.replace("'", "")
                     .split(": ")[0];
-            if (!String.valueOf(paramName).equals(temp))
+            if (!String.valueOf(paramName).contains(temp))
                 paramName.append(temp).append(";");
             paramValue.append(datum.replace("'", "")
                     .split(": ")[1]).append(";");
