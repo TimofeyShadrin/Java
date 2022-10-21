@@ -23,11 +23,13 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         log.info("\nEnter name");
-        String temp = scan.nextLine();
+        String temp = scan.nextLine().toLowerCase();
+        temp = temp.substring(0,1).toUpperCase() + temp.substring(1).toLowerCase();
         sb.append(" firstName = '").append(temp).append("' and");
 
         log.info("\nEnter lastname");
-        temp = scan.nextLine();
+        temp = scan.nextLine().toLowerCase();
+        temp = temp.substring(0,1).toUpperCase() + temp.substring(1).toLowerCase();
         sb.append(" secondName = '").append(temp).append("'");
 
         String q = String.valueOf(sb);
