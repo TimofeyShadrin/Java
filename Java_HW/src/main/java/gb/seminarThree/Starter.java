@@ -1,7 +1,5 @@
 package gb.seminarThree;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -16,7 +14,8 @@ public class Starter {
 
         List<Integer> numbers = new Random()
                 .ints(-10, 10)
-                .limit(5).boxed()
+                .limit(5)
+                .boxed()
                 .toList();
 
         String[] content = new String[]
@@ -83,7 +82,7 @@ public class Starter {
     }
 
     // Найти среднее значение
-    public Integer getAverage(@NotNull List<Integer> list) {
+    public Integer getAverage(List<Integer> list) {
         Iterator<Integer> iterator = list.iterator();
         int result = 0;
 
