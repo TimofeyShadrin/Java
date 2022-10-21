@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class Main {
+
     // Дана строка sql-запроса "select * from students".
     // Сформируйте часть WHERE этого запроса, используя StringBuilder.
     //
@@ -11,6 +12,7 @@ public class Main {
     // 2) Данные для фильтрации подаются в метод строкой в формате json.
     //      Пример json: {"firstName": "Ivan", "secondName": "Ivanov", ....}
     // Результат работы методов: "select * from students where firstName = 'Ivan' and ...".
+
     public static void main(String[] args) {
         Logger log = Logger.getLogger(gb.seminarOne.Main.class.getName());
 
