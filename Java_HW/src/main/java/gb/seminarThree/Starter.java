@@ -16,12 +16,12 @@ public class Starter {
 
         List<Integer> numbers = new Random()
                 .ints(-10, 10)
-                .limit(10).boxed()
+                .limit(5).boxed()
                 .toList();
 
         String[] content = new String[]
                 {
-                        "\nThe resulting list: ",
+                        "\nMy resulting list: ",
                         "\nOdd and positive numbers: ",
                         "\nMinimum value: ",
                         "\nMaximum value: ",
@@ -60,13 +60,25 @@ public class Starter {
 
     // Найти минимальное значение
     public Integer getMin(List<Integer> list) {
-        return Collections.min(list);
+        int result;
+        if (!list.isEmpty()) {
+            result = Collections.min(list);
+        } else {
+            result = 0;
+        }
+        return result;
 
     }
 
     // Найти максимальное значение
     public Integer getMax(List<Integer> list) {
-        return Collections.max(list);
+        int result;
+        if (!list.isEmpty()) {
+            result = Collections.max(list);
+        } else {
+            result = 0;
+        }
+        return result;
 
     }
 
@@ -75,12 +87,15 @@ public class Starter {
         Iterator<Integer> iterator = list.iterator();
         int result = 0;
 
-        if (list.isEmpty() || list.size() == 1) throw new RuntimeException("Your list is empty!");
-        else {
+        try {
             while (iterator.hasNext()) {
                 result += iterator.next();
             }
+            result = result / list.size();
+
+        } catch (ArithmeticException ex) {
+            result = 0;
         }
-        return result / list.size();
+        return result;
     }
 }
