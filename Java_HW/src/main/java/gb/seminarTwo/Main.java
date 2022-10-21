@@ -73,7 +73,7 @@ public class Main {
                 }
             }
         } catch (IndexOutOfBoundsException ex) {
-                log.info("No data available");
+                log.info("\nNo data available");
             }
             return String.valueOf(builder);
         }
@@ -97,7 +97,7 @@ public class Main {
                         .split(": ")[1]).append(";");
             }
         } catch (IndexOutOfBoundsException ex) {
-            log.info("No data available");
+            log.info("\nNo data available");
         }
 
         return updateQueryByArrays(q, String.valueOf(paramName).trim().split(";"),
