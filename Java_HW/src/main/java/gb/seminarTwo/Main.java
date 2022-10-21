@@ -72,27 +72,32 @@ public class Main {
                     builder.deleteCharAt(builder.length() - 2).append("\n");
                 }
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException ex) {
                 log.info("No data available");
             }
             return String.valueOf(builder);
         }
 
     public String updateQueryByJson(String q, String json){
-
-        String[] data = json.replaceAll("[{.+}]", "")
-                .split(", ");
+        Logger log = Logger.getLogger(gb.seminarOne.Main.class.getName());
 
         StringBuilder paramName = new StringBuilder();
         StringBuilder paramValue = new StringBuilder();
 
-        for (String datum : data) {
-            String temp = datum.replace("'", "")
-                    .split(": ")[0];
-            if (!String.valueOf(paramName).contains(temp))
-                paramName.append(temp).append(";");
-            paramValue.append(datum.replace("'", "")
-                    .split(": ")[1]).append(";");
+        try {
+            String[] data = json.replaceAll("[{.+}]", "")
+                    .split(", ");
+
+            for (String datum : data) {
+                String temp = datum.replace("'", "")
+                        .split(": ")[0];
+                if (!String.valueOf(paramName).contains(temp))
+                    paramName.append(temp).append(";");
+                paramValue.append(datum.replace("'", "")
+                        .split(": ")[1]).append(";");
+            }
+        } catch (IndexOutOfBoundsException ex) {
+            log.info("No data available");
         }
 
         return updateQueryByArrays(q, String.valueOf(paramName).trim().split(";"),
