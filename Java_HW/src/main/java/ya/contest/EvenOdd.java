@@ -1,7 +1,5 @@
 package ya.contest;
 
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -11,14 +9,14 @@ public class EvenOdd {
     private final Logger log = Logger.getLogger(EvenOdd.class.getName());
 
     public void setAnInt() {
-        while (anInt == 0) {
+        while (anInt <= 0) {
             try {
                 Scanner scan = new Scanner(System.in);
                 log.info("Enter an integer and positive number:");
-                this.anInt = scan.nextInt();
+                anInt = Integer.parseInt(scan.nextLine());
                 scan.close();
 
-            } catch (InputMismatchException ex) {
+            } catch (NumberFormatException ex) {
                 log.warning("Your input is incorrect! Try again.");
                 anInt = 0;
             }
