@@ -1,13 +1,17 @@
 package it.prog;
 
 class Some implements Runnable {
-    public static volatile int temp = 0;
+    public static int temp = 0;
+    public static final int N = 10_000_000;
+
+    public synchronized static void inc(){
+        temp++;
+    }
 
     @Override
     public void run() {
-        for (int i = 0; i < 10_000_000; i++){
-            temp++;
-            //System.out.println(name + temp);
+        for (int i = 0; i < N; i++){
+            inc();
         }
     }
 }
@@ -19,19 +23,9 @@ public class Starter {
         newOne.start();
         newTwo.start();
 
-        Thread t1 = new Thread(() -> {
-            for (int i = 0; i < 10_000_000; i++){
-                Some.temp++;
-                //System.out.println("main: " + Some.temp);
-            }
-        });
-        t1.start();
-
         newOne.join();
         newTwo.join();
-        t1.join();
 
         System.out.println(Some.temp);
-
     }
 }
