@@ -1,6 +1,7 @@
 package it.prog;
 
 class Some implements Runnable {
+    public static int temp = 0;
     @Override
     public void run() {
         for (int i = 0; i < 10; i++){
@@ -9,7 +10,8 @@ class Some implements Runnable {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.print(i);
+            temp++;
+            System.out.println(temp);
         }
     }
 }
@@ -28,7 +30,8 @@ public class Starter {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.print(i);
+                Some.temp++;
+                System.out.print(Some.temp);
             }
         });
         t1.start();
