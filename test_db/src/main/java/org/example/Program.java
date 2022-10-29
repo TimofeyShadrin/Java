@@ -13,7 +13,7 @@ public class Program {
                 System.out.println("Connected to the database!");
                 Statement statement = conn.createStatement();
                 ResultSet resultSet = statement.executeQuery(
-                        "select * from customers"
+                        "select * from customers where firstname = 'Timofei'"
                 );
                 HashMap<String, String> result = new HashMap<>();
                 String[] keys = new String[] {"ID", "Name", "Lastname", "e-mail", "phone", "Age"};
